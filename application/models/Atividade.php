@@ -9,7 +9,7 @@
  * @subpackage  <<application>>.application.models
  * @version     $Id$
  */
-class Atividade extends Ev_Db_Table {
+class Atividade extends Phpdf_Db_Table {
     protected $_name = 'atividade';
     protected $_dependentTables  = array( 'Inscricao' );
     protected $_primary = array('id');

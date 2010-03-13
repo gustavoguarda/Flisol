@@ -7,7 +7,7 @@
  * @subpackage  <<application>>.application.models
  * @version     $Id$
  */
-class Usuario extends Zend_Db_Table {
+class Usuario extends Phpdf_Db_Table {
     protected $_name = 'usuario';
     protected $_dependentTables  = array( 'Atividade', 'Inscricao' );
     protected $_primary = array('id');

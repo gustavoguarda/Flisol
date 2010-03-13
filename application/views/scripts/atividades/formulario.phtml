@@ -1,0 +1,40 @@
+<?php
+// atividade.php
+/**
+ * View do formulário de atividade
+ * @filesource  07/03/2010
+ * @author      Estrada Virtual <http://estradavirtual.com.br>
+ * @copyright   Copyright <2010> Estrada Virtual
+ * @package     <<application>>
+ * @subpackage  <<application>>.application.views
+ * @version     $Id$
+ */
+ ?>
+
+<div id="divFormulario">
+	<form action="<?php echo $this->baseUrl() ?>/atividades/gravar" method="post" name="formulario" id="formulario">
+		<input type="hidden" name="id" id="id" value="<?php echo $this->atividade->id ?>" />
+        <div>
+            <label for="nome">Nome&nbsp;<span class="campoObrigatorio">*</span>:  </label><br />
+            <input class="required" type="text" name="nome" id="nome" value="<?php echo $this->atividade->nome; ?>" title="Nome"  maxlength="45" />
+        </div>
+        <div>
+            <label for="descricao">Descrição&nbsp;<span class="campoObrigatorio">*</span>:  </label><br />
+            <input class="required" type="text" name="descricao" id="descricao" value="<?php echo $this->atividade->descricao; ?>" title="descricao"  maxlength="200" />
+        </div>
+        <div>
+            <label for="id_sala">Sala&nbsp;<span class="campoObrigatorio">*</span>:  </label><br />
+            <?php echo $this->formSelect('id_sala', $this->atividade->id_sala, null, $this->aDados["id_sala"]); ?>
+        </div>
+        <div>
+            <label for="id_palestrante">Palestrante&nbsp;<span class="campoObrigatorio">*</span>:  </label><br />
+            <?php echo $this->formSelect('id_palestrante', $this->atividade->id_palestrante, null, $this->aDados["id_palestrante"]); ?>
+        </div>
+        <div>
+            <label for="qt_horas">Quantidade de horas</label><br />
+            <input type="text" name="qt_horas" id="qt_horas" value="<?php echo $this->atividade->qt_horas; ?>" title="Quantidade de pessoas que cabem na atividade"  maxlength="45" />
+        </div>
+		
+		<input type="submit" name="enviar" id="enviar" value="Gravar" />
+	</form>
+</div>

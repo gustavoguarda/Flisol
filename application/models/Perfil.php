@@ -8,7 +8,11 @@
  * @version     $Id$
  */
 class Perfil extends Zend_Db_Table {
-    protected $_name = 'perfil';
+    
+	const PERFIL_ID_PALESTRANTE 	= 1;
+	const PERFIL_ID_PARTICIPANTE 	= 2;
+	
+	protected $_name = 'perfil';
     protected $_dependentTables  = array( 'Usuario' );
     protected $_primary = array('id');
     
